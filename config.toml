@@ -1,4 +1,4 @@
-baseURL = 'https://github.com/SomeDudeOnThisPage/TUDA-InteractionVR-Blog'
+baseURL = 'https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/'
 languageCode = 'en-us'
 title = 'Hi'
 theme = 'PaperMod'
