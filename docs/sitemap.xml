@@ -2,17 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/interaction-vrar/</loc>
+    <lastmod>2023-01-02T16:04:00+01:00</lastmod>
+  </url><url>
+    <loc>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/interaction-vrar/02-locomotion-i/</loc>
+    <lastmod>2023-01-02T16:04:00+01:00</lastmod>
+  </url><url>
+    <loc>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/interaction-vrar/03-locomotion-ii/</loc>
+    <lastmod>2023-01-02T16:04:00+01:00</lastmod>
+  </url><url>
+    <loc>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/interaction-vrar/01-setup/</loc>
+    <lastmod>2023-01-02T16:04:00+01:00</lastmod>
+  </url><url>
     <loc>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/</loc>
-    <lastmod>2022-11-15T23:08:25+01:00</lastmod>
-  </url><url>
-    <loc>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/posts/</loc>
-    <lastmod>2022-11-15T23:08:25+01:00</lastmod>
-  </url><url>
-    <loc>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/posts/p01-setup-unity/</loc>
-    <lastmod>2022-11-15T23:08:25+01:00</lastmod>
-  </url><url>
-    <loc>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/posts/p00-demo/</loc>
-    <lastmod>2022-11-15T22:53:03+01:00</lastmod>
+    <lastmod>2023-01-02T16:04:00+01:00</lastmod>
   </url><url>
     <loc>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/categories/</loc>
   </url><url>
