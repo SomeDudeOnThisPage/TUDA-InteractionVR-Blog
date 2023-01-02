@@ -1,0 +1,121 @@
+
+[params]
+env = "production"
+title = "Robin Buhlmann"
+description = "Robin Buhlmann"
+keywords = [ "Blog", "Portfolio", "PaperMod" ]
+# author = "Me"
+images = [ "<link or path of image for opengraph, twitter-cards>" ]
+DateFormat = "January 2, 2006"
+defaultTheme = "auto"
+disableThemeToggle = true
+ShowReadingTime = false
+ShowShareButtons = false
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = false
+ShowWordCount = true
+ShowRssButtonInSectionTermList = true
+UseHugoToc = false
+disableSpecial1stPost = false
+disableScrollToTop = false
+comments = false
+hidemeta = false
+hideSummary = false
+showtoc = false
+tocopen = false
+
+  [params.assets]
+  favicon = "<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>\">"
+  favicon16x16 = "<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>\">"
+  favicon32x32 = "<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>\">"
+  apple_touch_icon = "<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>\">"
+  safari_pinned_tab = "<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>\">"
+  disableFingerprinting = true
+  
+  [params.label]
+  text = "Home 🦆"
+  icon = "🦆"
+  iconHeight = 35
+
+  [params.profileMode]
+  enabled = false
+  title = "ExampleSite"
+  subtitle = "This is subtitle"
+  imageUrl = "<img location>"
+  imageWidth = 120
+  imageHeight = 120
+  imageTitle = "my image"
+
+    [[params.profileMode.buttons]]
+    name = "Posts"
+    url = "posts"
+
+    [[params.profileMode.buttons]]
+    name = "Tags"
+    url = "tags"
+
+  [params.homeInfoParams]
+  Title = "🦆"
+  Content = "I mostly write shitty OpenGL engines and then scrap them 15 times over."
+
+  [[params.socialIcons]]
+  name = "youtube"
+  url = "https://www.youtube.com/channel/UCpz_Xm5tD2p_wJ08T4Sp2ZQ"
+
+  [[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/SomeDudeOnThisPage"
+
+  [[params.socialIcons]]
+  name = "xing"
+  url = "https://www.xing.com/profile/Robin_Buhlmann2"
+
+[params.analytics.google]
+SiteVerificationTag = "XYZabc"
+
+[params.analytics.bing]
+SiteVerificationTag = "XYZabc"
+
+[params.analytics.yandex]
+SiteVerificationTag = "XYZabc"
+
+  [params.cover]
+  hidden = true
+  hiddenInList = true
+  hiddenInSingle = true
+
+  [params.editPost]
+  URL = "https://github.com/<path_to_repo>/content"
+  Text = "Suggest Changes"
+  appendFilePath = true
+
+  [params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  distance = 1_000
+  threshold = 0.4
+  minMatchCharLength = 0
+  keys = [ "title", "permalink", "summary", "content" ]
+
+[[menu.main]]
+identifier = "categories"
+name = "categories"
+url = "/categories/"
+weight = 10
+
+[[menu.main]]
+identifier = "tags"
+name = "tags"
+url = "/tags/"
+weight = 20
+
+[[menu.main]]
+identifier = "buhlmann.me"
+name = "buhlmann.me"
+url = "https://buhlmann.me"
+weight = 30
+
+[markup.highlight]
+noClasses = false

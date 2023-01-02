@@ -1,127 +1,80 @@
 baseURL = 'https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/'
 languageCode = 'en-us'
-title = 'Hi'
-theme = 'PaperMod'
-publishDir = "docs"
-pygmentsUseClasses = true
+title = 'Stuff.'
+theme = "huey"
+canonifyurls = true
 
 [params]
-env = "production"
-title = "Robin Buhlmann"
-description = "Robin Buhlmann"
-keywords = [ "Blog", "Portfolio", "PaperMod" ]
-# author = "Me"
-images = [ "<link or path of image for opengraph, twitter-cards>" ]
-DateFormat = "January 2, 2006"
-defaultTheme = "auto"
-disableThemeToggle = true
-ShowReadingTime = false
-ShowShareButtons = false
-ShowPostNavLinks = true
-ShowBreadCrumbs = true
-ShowCodeCopyButtons = false
-ShowWordCount = true
-ShowRssButtonInSectionTermList = true
-UseHugoToc = false
-disableSpecial1stPost = false
-disableScrollToTop = false
-comments = false
-hidemeta = false
-hideSummary = false
-showtoc = false
-tocopen = false
+  # General site metadata, used in header and other places
+  author = "Robin Buhlmann"
+  dateFormat = "January 2, 2006"
+  description = "Blog for InteractionVRAR at TU-Darmstadt, WS22/23"
+  keywords = ""
+  email = "robin@buhlmann.me"
 
-  [params.assets]
-  favicon = "<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>\">"
-  favicon16x16 = "<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>\">"
-  favicon32x32 = "<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>\">"
-  apple_touch_icon = "<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>\">"
-  safari_pinned_tab = "<link rel=\"icon\" href=\"data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎯</text></svg>\">"
-  disableFingerprinting = true
-  
-  [params.label]
-  text = "Home 🦆"
-  icon = "🦆"
-  iconHeight = 35
+  # Use your Font Awesome token here. Example token is fake, so please get your own.
+  fontawesomeToken = "018de52a07"
 
-  [params.profileMode]
-  enabled = false
-  title = "ExampleSite"
-  subtitle = "This is subtitle"
-  imageUrl = "<img location>"
-  imageWidth = 120
-  imageHeight = 120
-  imageTitle = "my image"
+  # Use content from _index.md on homepage
+  # useIndexContent = true # default is false
 
-    [[params.profileMode.buttons]]
-    name = "Posts"
-    url = "posts"
+  # Navigation, use Bulma options here
+  # navbarStyle = "is-transparent" # Default is "is-transparent"
+  # navbarTitleStyle = "has-text-black" # Default is "has-text-black"
 
-    [[params.profileMode.buttons]]
-    name = "Tags"
-    url = "tags"
+  # # Override Bulma schemes with values
+  # schemeMain = "" # Change background color, default is white
+  # link = "#000" # Bulma default is blue, though theme is black
+  # linkHover = "#888" # Bulma default is grey-darker, though theme is #888
+  # footerBackgroundColor = "false" # Bulma default is #fafafa. You can use "false" or #hex
+  # navbarItemHoverColor = "#444" # Bulma default is blue, though theme is #444
+  # navbarItemColor = "#888" # Bulma default is grey-dark, though theme is #888
 
-  [params.homeInfoParams]
-  Title = "🦆"
-  Content = "I mostly write shitty OpenGL engines and then scrap them 15 times over."
+  # Set static directory locations and favicon
+  favicon = "favicon.ico"
+  staticDir = ['static']
 
-  [[params.socialIcons]]
-  name = "youtube"
-  url = "https://www.youtube.com/channel/UCpz_Xm5tD2p_wJ08T4Sp2ZQ"
 
-  [[params.socialIcons]]
-  name = "github"
-  url = "https://github.com/SomeDudeOnThisPage"
+[menu]
 
-  [[params.socialIcons]]
-  name = "xing"
-  url = "https://www.xing.com/profile/Robin_Buhlmann2"
+# Top Navigation
+[[menu.nav]]
+  identifier = 'home'
+  name = 'Home'
+  title = 'Home'
+  url = '/'
+  weight = 10
 
-[params.analytics.google]
-SiteVerificationTag = "XYZabc"
+[[menu.nav]]
+  identifier = 'archive'
+  name = 'Archive'
+  title = "Archive"
+  url = '/archive/'
+  weight = 20
 
-[params.analytics.bing]
-SiteVerificationTag = "XYZabc"
+# Contacts
 
-[params.analytics.yandex]
-SiteVerificationTag = "XYZabc"
+[[ menu.social]]
+  identifier = 'linkedin'
+  name = 'LinkedIn'
+  pre = "<i class='fab fa-linkedin fa-lg'></i>"
+  url = "https://linkedin.com/in/yourlinkedinprofile"
+  weight = 10
 
-  [params.cover]
-  hidden = true
-  hiddenInList = true
-  hiddenInSingle = true
+[[ menu.social]]
+  identifier = 'github'
+  name = 'Github'
+  pre = "<i class='fab fa-github fa-lg'></i>"
+  url = "https://github.com/yourgithubname"
+  weight = 20
 
-  [params.editPost]
-  URL = "https://github.com/<path_to_repo>/content"
-  Text = "Suggest Changes"
-  appendFilePath = true
+[[ menu.social]]
+  identifier = 'twitter'
+  name = 'Twitter'
+  pre = "<i class='fab fa-twitter fa-lg'></i>"
+  url = "https://twitter.com/yourtwittername"
+  weight = 30
 
-  [params.fuseOpts]
-  isCaseSensitive = false
-  shouldSort = true
-  location = 0
-  distance = 1_000
-  threshold = 0.4
-  minMatchCharLength = 0
-  keys = [ "title", "permalink", "summary", "content" ]
-
-[[menu.main]]
-identifier = "categories"
-name = "categories"
-url = "/categories/"
-weight = 10
-
-[[menu.main]]
-identifier = "tags"
-name = "tags"
-url = "/tags/"
-weight = 20
-
-[[menu.main]]
-identifier = "buhlmann.me"
-name = "buhlmann.me"
-url = "https://buhlmann.me"
-weight = 30
-
-[markup.highlight]
-noClasses = false
+[outputs]
+  home = ['HTML', 'RSS']
+  pages = ['HTML']

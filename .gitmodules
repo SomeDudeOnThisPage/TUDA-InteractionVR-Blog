@@ -1,3 +1,18 @@
 [submodule "themes/PaperMod"]
 	path = themes/PaperMod
 	url = https://github.com/adityatelange/hugo-PaperMod.git
+[submodule "themes/hero"]
+	path = themes/hero
+	url = https://github.com/yue1124/hero.git
+[submodule "themes/digitalgarden"]
+	path = themes/digitalgarden
+	url = https://github.com/apvarun/digital-garden-hugo-theme.git
+[submodule "themes/tinyworks"]
+	path = themes/tinyworks
+	url = https://github.com/Nigh/tinyworks
+[submodule "themes/showcase"]
+	path = themes/showcase
+	url = https://github.com/apvarun/showcase-hugo-theme.git
+[submodule "themes/huey"]
+	path = themes/huey
+	url = https://github.com/alloydwhitlock/huey/

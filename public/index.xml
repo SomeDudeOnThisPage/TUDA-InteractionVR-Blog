@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stuff.</title>
+    <link>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/</link>
+    <description>Recent content on Stuff.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 02 Jan 2023 16:04:00 +0100</lastBuildDate><atom:link href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Locomotion I - Headset Angles</title>
+      <link>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/interaction-vrar/02-locomotion-i/</link>
+      <pubDate>Mon, 02 Jan 2023 16:04:00 +0100</pubDate>
+      
+      <guid>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/interaction-vrar/02-locomotion-i/</guid>
+      <description>Hot sun beating down1. To develop the locomotion technique, I set up a simple testing scene to enable controlled testing without needing to deploy the entire Parkour-Scene everytime. The scene is currently incredibly simple, yet provides everything needed to test a simple character-controller: Collisions and a slope.
+Sample Scene: Men really live like this and see nothing wrong SMH. The scene will be altered incrementally to test new features. Player Setup I can&amp;rsquo;t dance.</description>
+    </item>
+    
+    <item>
+      <title>Locomotion II - Turning</title>
+      <link>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/interaction-vrar/03-locomotion-ii/</link>
+      <pubDate>Mon, 02 Jan 2023 16:04:00 +0100</pubDate>
+      
+      <guid>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/interaction-vrar/03-locomotion-ii/</guid>
+      <description>Address unknown? As you may have noticed already, the movement implementation of the previous chapter has one integral flaw: There is no way to actually rotate around the up-axis in order to turn around farther than a normal person&amp;rsquo;s neck allows. As this project is intended to help people with severely reduced freedom of movement, 360° full body turning may not be a possibility, and the turning angle needs to be defined by the maximum angle the neck can turn.</description>
+    </item>
+    
+    <item>
+      <title>Setting up Unity for Quest2 development.</title>
+      <link>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/interaction-vrar/01-setup/</link>
+      <pubDate>Mon, 02 Jan 2023 16:04:00 +0100</pubDate>
+      
+      <guid>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/interaction-vrar/01-setup/</guid>
+      <description>Headset Configuration Before beginning to develop software for the Quest2, we need to setup the headset and corresponding software.
+Quest2 First, enable development mode on the Headset. Unfortunately, in order to do this, a Smartphone with the Oculus-App is required. After installing the App and logging into your Meta-Account, pair your Phone to the Quest2. Make sure the Phone and Quest are in the same WiFi network, both have bluetooth enabled, your phone having location services enabled, and both devices being situated close to one another and the router.</description>
+    </item>
+    
+  </channel>
+</rss>
