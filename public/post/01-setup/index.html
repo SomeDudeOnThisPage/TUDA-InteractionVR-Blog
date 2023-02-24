@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.109.0">
+
+  <title>Setting up Unity for Quest2 development. &middot; Interaction in Virtual and Augmented Reality</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
+
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/androidstudio.min.css">
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/img/favicon.ico" type="image/x-icon" />
+
+  
+    
+        <link rel="stylesheet" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/css/my.css">
+    
+  
+  
+    
+        <script src="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/js/my.js"></script>
+    
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://youtube.com/user/FreakGamingLP" rel="me" target="_blank"><i class="fab fa-youtube-square fa-fw"></i>YouTube</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://xing.com/profile/Robin_Buhlmann2/cv" rel="me" target="_blank"><i class="fab fa-xing-square fa-fw"></i>Xing</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/SomeDudeOnThisPage" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2022. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Setting up Unity for Quest2 development.</h1>
+  <h2></h2>
+</div>
+<div class="content">
+  <h2 id="headset-configuration">Headset Configuration</h2>
+<p>Before beginning to develop software for the Quest2, we need to setup the headset and corresponding software.</p>
+<h3 id="quest2">Quest2</h3>
+<p>First, enable development mode on the Headset. Unfortunately, in order to do this, a Smartphone with the Oculus-App is required. After installing the App and logging into your Meta-Account, pair your Phone to the Quest2. Make sure the Phone and Quest are in the same WiFi network, both have bluetooth enabled, your phone having location services enabled, and both devices being situated close to one another and the router.</p>
+<blockquote>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --> <strong>Do I really need the f***ing app?</strong> Yes, Meta requires all these services enabled to just pair the Quest to a Phone, and doesn&rsquo;t let you enable developer mode otherwise. Some time ago, there was also a way to enable developer-mode by registering an organization on your Meta-Account. However, this method seems to no longer work. Thanks, Mark.</p>
+</blockquote>
+<p>After pairing, simply enable Developer mode on the Quest by ticking the checkbox inside the settings in the app.</p>
+<p>Now install the Oculus-App on the development machine, connect the Quest to the PC via USB and allow access to the Quests storage by putting on the Headset, and clicking &lsquo;Allow&rsquo; in the popup-dialogue. Also accept any popups for remote debugging.</p>
+<h3 id="android-build">Android Build</h3>
+<p>To deploy to the Quest, first install the Android Build Tools via Unity Hub. After installation and creation of a project, navigate to File &gt; Build Settings, tick the scenes you wish to deploy to the quest, and select &lsquo;Android&rsquo; as platform. If you set up the Quest correctly, the device is connected and the Oculus-App is running, you should be able to select &lsquo;Oculus Quest 2&rsquo; as the run device, and you should be able to deploy directly to the headset.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="unity-build-settings.png" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Unity Build Settings:</strong> Additionally, I enabled &lsquo;Development Build&rsquo;, to allow for quicker deploy times by patching the executable already present on the device after the first deploy.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --> <strong>Unity Editor:</strong> Any sensibly new version of the Unity editor should work fine. For this project, Unity Editor v.<em>2021.3.16f1</em> was chosen, simply because the example project provided by the course organizers used v.<em>2021.3.x</em>.</p>
+</blockquote>
+<p>After the setup, simply hit &lsquo;Build and Run&rsquo; when the headset is connected to the development machine, and choose a name for the .apk file to be deployed to the Quest. The Quest should automatically run the application after deployment. The App can be found on the Quest in the App-Explorer when selecting the &lsquo;Unknown Sources&rsquo;-Filter.</p>
+<h3 id="ovrcamerarig">OVRCameraRig</h3>
+<p>Adding the Camera Rig is as simple as deleting the existing main camera, and dropping the &lsquo;OVRCameraRig&rsquo; into the scene. More about the settings for the prefabs can be found <a href="https://developer.oculus.com/documentation/unity/unity-add-camera-rig">in the official Oculus Unity developer Resources</a>.</p>
+<hr>
+<h2 id="ovrheadsetemulator-fix">OVRHeadsetEmulator Fix</h2>
+<p>For this project, I knew right ahead that I needed to do a lot of testing when it comes to the interaction between the headset-position / -angle and player locomotion / interaction. The OVRCameraRig-prefab includes a script to let developers emulate headset movement directly inside the unity editor without needing to deploy or run the software over Air-Link, which saves an incredible amount of time when frequently testing HMD-movement related code.</p>
+<p>However, this script is bugged in newer Unity versions, where the script will not be initialized. After some googling, one solution is to alter the <code>Awake</code>-method in OVRManager.cs in the following way:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">void</span> Awake() {
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#if !USING_XR_SDK</span>
+</span></span><span style="display:flex;"><span>	InitOVRManager();
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span><span style="color:#66d9ef">else</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// OLD:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// if (OVRPlugin.initialized)</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// NEW:</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (!OVRPlugin.initialized || (Settings.enabled &amp;&amp; Settings.loadedDeviceName == OPENVR_UNITY_NAME_STR))
+</span></span><span style="display:flex;"><span>        InitOVRManager();
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span>endif
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>After applying this workaround, the HMD orientation can be changed when running the project in the editor:</p>
+<ul>
+<li>Holding CTRL lets you adjust the Pitch (rotation around the x-Axis) and Yaw (rotation around the y-Axis) using the mouse.</li>
+<li>Holding CTRL+ALT lets you adjust the Roll (rotation around the z-Axis) using the mouse.</li>
+</ul>
+<hr>
+<h2 id="unity-and-git">Unity and Git</h2>
+<p>One of the most useful extensions when working with big files and git - for instance, say, like image and model files - is <a href="https://git-lfs.com/">git-LFS</a> (LargeFileSystem). Without going too much into detail, basically, instead of storing large files directly inside the remote repository, with git-LFS, large files are stored on a remote server (like GitHubs servers, which support the extension). Inside the actual repository, these files are tracked via pointers, and the file types and options can be defined via a <code>.gitattributes</code>-file. There&rsquo;s a great <a href="https://adamwreed93.medium.com/how-to-set-up-git-lfs-into-your-unity-project-9fd276305fe7">Tutorial</a> by Adam Reed if you want to know more about the setup and usage of git-LFS with Unity.</p>
+<hr>
+<h2 id="whats-next">What&rsquo;s next?</h2>
+<p>In the next chapter, we will set the foundation for player movement, as well as future player plug-ins like interaction.</p>
+
+</div>
+
+</div>
+</div>
+<script src="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/js/ui.js"></script>
+<script src="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/js/menus.js"></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

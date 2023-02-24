@@ -1,80 +1,55 @@
 baseURL = 'https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/'
 languageCode = 'en-us'
-title = 'Stuff.'
-theme = "huey"
+title = "Interaction in Virtual and Augmented Reality"
+theme = "blackburn"
+
+copyright = "&copy; 2022. All rights reserved."
 canonifyurls = true
+paginate = 10
+
+[indexes]
+  tag = "tags"
+  topic = "topics"
 
 [params]
-  # General site metadata, used in header and other places
-  author = "Robin Buhlmann"
-  dateFormat = "January 2, 2006"
-  description = "Blog for InteractionVRAR at TU-Darmstadt, WS22/23"
-  keywords = ""
-  email = "robin@buhlmann.me"
-
-  # Use your Font Awesome token here. Example token is fake, so please get your own.
-  fontawesomeToken = "018de52a07"
-
-  # Use content from _index.md on homepage
-  # useIndexContent = true # default is false
-
-  # Navigation, use Bulma options here
-  # navbarStyle = "is-transparent" # Default is "is-transparent"
-  # navbarTitleStyle = "has-text-black" # Default is "has-text-black"
-
-  # # Override Bulma schemes with values
-  # schemeMain = "" # Change background color, default is white
-  # link = "#000" # Bulma default is blue, though theme is black
-  # linkHover = "#888" # Bulma default is grey-darker, though theme is #888
-  # footerBackgroundColor = "false" # Bulma default is #fafafa. You can use "false" or #hex
-  # navbarItemHoverColor = "#444" # Bulma default is blue, though theme is #444
-  # navbarItemColor = "#888" # Bulma default is grey-dark, though theme is #888
-
-  # Set static directory locations and favicon
-  favicon = "favicon.ico"
-  staticDir = ['static']
-
+  # Shown in the home page
+  subtitle = "Blog for TU-Darmstadt course in WS22/23"
+  # brand = "Blackburn"
+  # googleAnalytics = "Your Google Analytics tracking ID"
+  # disqus = "Your Disqus shortname"
+  # CSS name for highlight.js
+  highlightjs = "androidstudio"
+  highlightjs_extra_languages = ["yaml"]
+  dateFormat = "02 Jan 2006, 15:04"
+  # Include any custom CSS and/or JS files
+  # (relative to /static folder)
+  custom_css = ["css/my.css"]
+  custom_js = ["js/my.js"]
 
 [menu]
+  # Shown in the side menu.
+  [[menu.main]]
+    name = "Home"
+    pre = "<i class='fa fa-home fa-fw'></i>"
+    weight = 1
+    identifier = "home"
+    url = "/post/"
+  [[menu.main]]
+    name = "About"
+    pre = "<i class='fa fa-user fa-fw'></i>"
+    weight = 3
+    identifier = "about"
+    url = "/about/"
 
-# Top Navigation
-[[menu.nav]]
-  identifier = 'home'
-  name = 'Home'
-  title = 'Home'
-  url = '/'
-  weight = 10
+[social]
+  # Link your social networking accounts to the side menu
+  # by entering your username or ID.
 
-[[menu.nav]]
-  identifier = 'archive'
-  name = 'Archive'
-  title = "Archive"
-  url = '/archive/'
-  weight = 20
+  # SNS photo/video sharing
+  youtube = "FreakGamingLP"
 
-# Contacts
+  # SNS career oriented
+  xing = "Robin_Buhlmann2/cv"
 
-[[ menu.social]]
-  identifier = 'linkedin'
-  name = 'LinkedIn'
-  pre = "<i class='fab fa-linkedin fa-lg'></i>"
-  url = "https://linkedin.com/in/yourlinkedinprofile"
-  weight = 10
-
-[[ menu.social]]
-  identifier = 'github'
-  name = 'Github'
-  pre = "<i class='fab fa-github fa-lg'></i>"
-  url = "https://github.com/yourgithubname"
-  weight = 20
-
-[[ menu.social]]
-  identifier = 'twitter'
-  name = 'Twitter'
-  pre = "<i class='fab fa-twitter fa-lg'></i>"
-  url = "https://twitter.com/yourtwittername"
-  weight = 30
-
-[outputs]
-  home = ['HTML', 'RSS']
-  pages = ['HTML']
+  # Techie
+  github = "SomeDudeOnThisPage"
