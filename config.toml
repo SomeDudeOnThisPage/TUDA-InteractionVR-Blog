@@ -2,6 +2,7 @@ baseURL = 'https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/'
 languageCode = 'en-us'
 title = "Interaction in Virtual and Augmented Reality"
 theme = "blackburn"
+publishDir = "docs"
 
 copyright = "&copy; 2022. All rights reserved."
 canonifyurls = true

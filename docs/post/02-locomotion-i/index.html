@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="generator" content="Hugo 0.109.0">
+
+  <title>Locomotion I - Headset Angles &amp; Basic Movement &middot; Interaction in Virtual and Augmented Reality</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
+
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/androidstudio.min.css">
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/languages/yaml.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/img/favicon.ico" type="image/x-icon" />
+
+  
+    
+        <link rel="stylesheet" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/css/my.css">
+    
+  
+  
+    
+        <script src="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/js/my.js"></script>
+    
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://youtube.com/user/FreakGamingLP" rel="me" target="_blank"><i class="fab fa-youtube-square fa-fw"></i>YouTube</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://xing.com/profile/Robin_Buhlmann2/cv" rel="me" target="_blank"><i class="fab fa-xing-square fa-fw"></i>Xing</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/SomeDudeOnThisPage" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; 2022. All rights reserved.</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Locomotion I - Headset Angles &amp; Basic Movement</h1>
+  <h2></h2>
+</div>
+<div class="content">
+  <p>To develop the locomotion technique, I set up a simple testing scene to enable controlled testing without needing to deploy the entire Parkour-Scene everytime. The scene is currently incredibly simple, yet provides everything needed to test a simple character-controller: Collisions and a slope.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+
+<div class="pure-g">
+
+  
+  
+  
+  
+  <div class="pure-u-1">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="unity-testing-scene.png"
+        alt="lmao">
+    </div>
+  </div>
+  
+
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Unity Testing Scene:</strong> Everything a man needs to survive. Also, I didn&rsquo;t know how to correctly scale materials independant of the mesh it&rsquo;s applied to, so this scene uses around 20 materials with the same texture and different scaling.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="player-setup">Player Setup</h2>
+<p>Speaking of character controller, we need to decide on a way to actually move a character around the scene. Right now, all we have is a static OVRCameraRig sitting around in the scene. There&rsquo;s many ways to create a control system in Unity - but one of the easiest ways is to just use the already existing &lsquo;Character Controller&rsquo; that comes with Unity.</p>
+<p>I started by creating some kind of mesh that represents the character, and add the OVRCameraRig as a child to said mesh. Technically, only a MeshCollider is required, but adding a Mesh makes it easier to visually debug the locomotion technique. Note that the Mesh-Component should ideally be disabled for production builds. Make sure the forward-vector (the blue z-Axis when clicking the mesh) aligns with the cameras&rsquo; forward-axis (The height offset does not matter in this case, however). This will be important for Chapter 3.</p>
+<blockquote>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --> <strong>Note:</strong> Whenever I speak of &rsquo;the&rsquo; camera, I refer to the Center-Eye-Anchor of the OVRCameraRig.</p>
+</blockquote>
+<p>Afterwards, I simply added a &lsquo;CharacterController&rsquo;-Component to the Player object.</p>
+<p>I created a script and attached it to the Player object. In this script, I created a reference to &lsquo;CharacterController&rsquo;, then dragged and dropped the corresponding CharacterController inside the inspector. Even though the final Project will not use contoller input, I also created fields for the controllers inside the player script, to use their input for run-time debugging on the Quest, along with a reference to the camera and some boring debug stuff.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Player</span> : MonoBehaviour {
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">  [SerializeField]</span> <span style="color:#66d9ef">private</span> AbstractPlayerPlugin _locomotion;
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Chapters 5 - ...infinity?</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// [SerializeField] private InteractionTechnique _interaction;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">    
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">  [SerializeField]</span> <span style="color:#66d9ef">private</span> OVRInput.Controller[] _controllers;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">  [SerializeField]</span> <span style="color:#66d9ef">private</span> GameObject _camera;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">  [SerializeField]</span> <span style="color:#66d9ef">private</span> GameObject _debug;
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">  [SerializeField]</span> <span style="color:#66d9ef">public</span> CharacterController controller;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Ignore this for now. This will be changed in Chapter 4.</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">private</span> PlayerState _state;
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> Player() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>._state = PlayerState.DEFAULT;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> GameObject GetCamera() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">this</span>._camera;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">void</span> Update() {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">float</span> lt = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, <span style="color:#66d9ef">this</span>._controllers[<span style="color:#ae81ff">0</span>]); 
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">float</span> rt = OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger, <span style="color:#66d9ef">this</span>._controllers[<span style="color:#ae81ff">1</span>]);
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// For now, just enable movement when the mouse button on PC, or any of the triggers are pressed.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>._state = lt &gt; <span style="color:#ae81ff">0.95f</span> || rt &gt; <span style="color:#ae81ff">0.95f</span> || Input.GetMouseButton(<span style="color:#ae81ff">0</span>) ? PlayerState.MOVEMENT : PlayerState.DEFAULT;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Vector3 rotation = <span style="color:#66d9ef">this</span>._camera.transform.rotation.eulerAngles;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>._locomotion.GetPlayerState() == <span style="color:#66d9ef">this</span>._state) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">this</span>._locomotion.UpdatePlugin(<span style="color:#66d9ef">this</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#if DEBUG</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// [...] boring...</span>
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span>endif
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<p>I abstracted the logic of the movement into &lsquo;AbstractPlayerPlugin&rsquo;. This class inherits from &lsquo;ScriptableObject&rsquo; which allows us to create multiple Objects with different values, which can be easily swapped between in the editor to enable quick testing without having to delete all existing values.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#75715e">/**
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">* Enables hooking functionality into the movement/interaction techniques without tampering with
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">* already existing, (more or less) functioning systems.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">*/</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">AbstractPlayerPlugin</span> : ScriptableObject {
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#if DEBUG</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> UpdateDebug(Player player, DebugUtils.DebugData debug);
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">#</span>endif
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> <span style="color:#66d9ef">void</span> UpdatePlugin(Player player);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#66d9ef">abstract</span> PlayerState GetPlayerState();
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><!-- raw HTML omitted -->
+<hr>
+<h2 id="relative-head-movement">Relative Head Movement</h2>
+<p>To enable movement along the direction of the camera, we need to, suprisingly, acquire the rotation of the camera. In this case, I simply use the orientation of the center camera of the OVRCameraRig. The orientation, however, is given in degrees in a range of 0° to 360°. To enable two-Axis movement per pitch and yaw, however, we need these values &rsquo;normalized&rsquo; into the range of [-180°,180°).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+
+<div class="pure-g">
+
+  
+  
+  
+  
+  <div class="pure-u-1">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="angles.png"
+        alt="lmao">
+    </div>
+  </div>
+  
+
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Angles:</strong> This image gives a reference to which angle relates to which head movement. These naming conventions will be used for all further discussions.</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted --> <strong>Note:</strong> Whenever I talk about &rsquo;normalized&rsquo; angles now, I mean angles transformed into the range of [-180°,180°) with any given deadzone. A &rsquo;native&rsquo; angle describes an angle before normalization.</p>
+</blockquote>
+<p>We also want a &lsquo;deadzone&rsquo;, i.e. an angle around 0°, in which a native angle of less than the deadzone value results in a normalized angle of 0°.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">private</span> <span style="color:#66d9ef">static</span> <span style="color:#66d9ef">float</span> NormalizeHMDAngle(<span style="color:#66d9ef">float</span> degrees, <span style="color:#66d9ef">float</span> deadzonex, <span style="color:#66d9ef">float</span> deadzoney) {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> degrees <span style="color:#66d9ef">switch</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// normalize value between (-180, 180)</span>
+</span></span><span style="display:flex;"><span>    &lt; <span style="color:#ae81ff">180.0f</span> when degrees &gt; deadzonex =&gt; -(degrees - deadzonex),
+</span></span><span style="display:flex;"><span>    &gt;= <span style="color:#ae81ff">180.0f</span> when degrees &lt; <span style="color:#ae81ff">360.0f</span> - deadzoney =&gt; (<span style="color:#ae81ff">360.0f</span> - degrees - deadzoney),
+</span></span><span style="display:flex;"><span>    _ =&gt; <span style="color:#ae81ff">0.0f</span>
+</span></span><span style="display:flex;"><span>  };
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">static</span> Vector3 NormalizeHMDAngles(Vector3 degrees, Vector3? deadzone = <span style="color:#66d9ef">null</span>) {
+</span></span><span style="display:flex;"><span>  deadzone ??= <span style="color:#66d9ef">new</span> Vector3(<span style="color:#ae81ff">0.0f</span>, <span style="color:#ae81ff">0.0f</span>, <span style="color:#ae81ff">0.0f</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">new</span> Vector3(
+</span></span><span style="display:flex;"><span>    MathUtils.NormalizeHMDAngle(degrees.x, deadzone.Value.x, deadzone.Value.z),
+</span></span><span style="display:flex;"><span>    MathUtils.NormalizeHMDAngle(degrees.y, deadzone.Value.y, deadzone.Value.y),
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// RelativeHeadLocomotion.Normalize(degrees.z, deadzone.Value.z) // We don&#39;t need the z-Rotation yet.</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">0.0f</span>
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>Below you can see a demonstration of the normalized values with a deadzone angle of 5°. Note how the normalized values only increase if the players&rsquo; forward vector is not inside the cone spanned by the deadzone angles.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="deadzone-normalization.gif" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Deadzone:</strong> Example of the deadzone for the angle around the y-axis. In this case, the deadzone is 5° (green) in both directions around the forward vector (blue) of the player.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="speed">Speed</h2>
+<p>Whilst moving at a constant speed is certainly an option, it does not provide enough flexibility to enable both precise, and speedy movement. On goal of the parkour is to traverse it at the highest possible speed, after all. Thus, there need to be at least two levels for each axis - one precise, slow speed, and a faster &lsquo;running&rsquo; speed, which - importantly - are independant of other speeds from different angles. As an example, the user should be able to tilt their head back slightly to move back precisely, whilst also rotating their head aggressively to strafe quickly at the same time<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>. However, this doesn&rsquo;t need to be limited to two levels.</p>
+<h4 id="how-to-actually-control-speed">How to actually control speed?</h4>
+<p>I pondered two different approaches to modifying the speed of the player based on the normalized device angles:</p>
+<ul>
+<li>Switching between constant speeds whenever the normalized angle hits a threshold: This approach works well for precise, slow movement without inducing much motion sickness - however it is limited in precision when moving at a faster pace, as there is no way to dynamically slow down or speed up &ldquo;a little&rdquo;.</li>
+<li>Dynamic ramp-up based directly on the angle of attack: This approach works well when making small adjustments whilst moving quickly, but is frustrating to use when you want to make small, precise and slow adjustments to the current position.</li>
+</ul>
+<h4 id="so-which-approach-is-better">So which approach is better?</h4>
+<p>The constant approach works best when moving slow, but when moving faster, making small adjustments to the movement speed can make navigating easier. Thus, I decided to just combine both approaches. There&rsquo;s still levels - based on the angle of attack of the HMD - of constant movement speed coefficients as before, but each level comes with an additional dynamic coefficient. This coefficient is zero or near-zero for lower levels, getting progressively larger for faster movement speeds. This will be discussed further in it&rsquo;s own chapter about tuning all sorts of values, though.</p>
+<p>Now we just need to acquire the normalized angles from the native angles each tick, apply the deadzone, and retrieve the speed modifier coefficients based on the normalized angle.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span><span style="color:#66d9ef">public</span> <span style="color:#66d9ef">override</span> <span style="color:#66d9ef">void</span> UpdatePlugin(Player player) {
+</span></span><span style="display:flex;"><span>  Vector3 rotation = player.GetCamera().transform.rotation.eulerAngles;
+</span></span><span style="display:flex;"><span>  Vector3 normalized = MathUtils.NormalizeHMDAngles(rotation, <span style="color:#66d9ef">this</span>._deadzone);
+</span></span><span style="display:flex;"><span>  RelativeHeadLocomotion._Coefficients coefficients = <span style="color:#66d9ef">this</span>.GetCoefficients(normalized);
+</span></span></code></pre></div><p>Afterwards, all that&rsquo;s left is to create a speed scale based on these coefficients, take the delta time since the last tick into account, and apply the movement to the character controller.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-cs" data-lang="cs"><span style="display:flex;"><span>Vector3 scale = <span style="color:#66d9ef">new</span> Vector3(
+</span></span><span style="display:flex;"><span>  normalized.x * coefficients.dynamicX * Time.deltaTime + coefficients.constantX * Time.deltaTime,
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">0.0f</span>,
+</span></span><span style="display:flex;"><span>  normalized.z * coefficients.dynamicZ * Time.deltaTime + coefficients.constantZ * Time.deltaTime 
+</span></span><span style="display:flex;"><span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Camera forward and right vectors:</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> forward = player.GetCamera().transform.forward;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> right = player.GetCamera().transform.right;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Project forward and right vectors on the horizontal plane (y = 0).</span>
+</span></span><span style="display:flex;"><span>forward.y = <span style="color:#ae81ff">0f</span>;
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// right.y = 0f;</span>
+</span></span><span style="display:flex;"><span>forward.Normalize();
+</span></span><span style="display:flex;"><span>right.Normalize();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">var</span> move = forward * scale.z + right * scale.x;
+</span></span><span style="display:flex;"><span>move.y = -<span style="color:#ae81ff">9.8f</span> * Time.deltaTime; <span style="color:#75715e">// Roughly apply gravity.</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">if</span> (<span style="color:#66d9ef">this</span>._movement) {
+</span></span><span style="display:flex;"><span>  player.controller.Move(move);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Set speed value without gravity constant, used mainly for the &#39;Return to Center&#39;-Mechanic (see next chapter).</span>
+</span></span><span style="display:flex;"><span>  move.y = <span style="color:#ae81ff">0.0f</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">this</span>._speed = move.magnitude;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><table>
+<thead>
+<tr>
+<th style="text-align:center"><img src="header_unused.gif" alt=""></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Movement:</strong> All together, we can now move the character based on the pitch angle in the direction of the yaw angle, with a given deadzone. Note the native and normalized angle values in the top left corner.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="whats-next">What&rsquo;s next?</h2>
+<p>In the next chapter, we will discuss one major flaw that the implementation has so far: &ldquo;<em>how do we actually turn around fully?</em>&rdquo;</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>Strafing will be briefly discussed in a later chapter.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+
+</div>
+
+</div>
+</div>
+<script src="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/js/ui.js"></script>
+<script src="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/js/menus.js"></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
