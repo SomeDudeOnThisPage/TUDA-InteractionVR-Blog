@@ -4,9 +4,10 @@ description: "TU-Darmstadt, WS22/23"
 date: 2022-11-14
 draft: false
 type: blog
+tags: [Interaction in VR/AR]
 ---
 
-This entire blog is about 'Interaction in Virtual and augmented Reality', a course at TU-Darmstadt in the winter semester 2022/2023, in which I participated. More details can be (hopefully, in case TUCAN, the universities' system, didn't die) found [here](https://www.tucan.tu-darmstadt.de/scripts/mgrqispi.dll?APPNAME=CampusNet&PRGNAME=COURSEDETAILS&ARGUMENTS=-N477100486602966,-N000664,-N0,-N383984259959712,-N383984259954713,-N0,-N0,-N0). The course was held by Jan Gugenheimer[^1], the overall class structure was inspired by the MIT-Course "How to make (almost) Anything"[^2], a course in which people... make... stuff... and then write about it. [Look, best go check it out yourself](http://fab.cba.mit.edu/classes/863.22/people.html), it's quite interesting.
+This entire blog is about 'Interaction in Virtual and augmented Reality', a course at TU-Darmstadt in the winter semester 2022/2023, in which I participated. More details can be (hopefully, in case TUCAN, the universities' system, didn't die) found [here](https://www.tucan.tu-darmstadt.de/scripts/mgrqispi.dll?APPNAME=CampusNet&PRGNAME=COURSEDETAILS&ARGUMENTS=-N000000000000001,-N000662,-N0,-N383984259959712,-N383984259954713,-N0,-N0,-N0). The course was held by Jan Gugenheimer[^1], the overall class structure was inspired by the MIT-Course "How to make (almost) Anything"[^2], a course in which people... make... stuff... and then write about it. [Look, best go check it out yourself](http://fab.cba.mit.edu/classes/863.22/people.html), it's quite interesting.
 
 [^1]: https://gugenheimer.com/
 [^2]: http://fab.cba.mit.edu/classes/863.22/people.html
@@ -35,11 +36,11 @@ I chose a much more boring approach: All the above solutions relied on either co
 | **Idea:** What if I just use a persons' neck as a thumbstick? |
 
 #### How is this useful?
-One apparent use for such a technology would be to aid and enable people with bodily impairments - say people paralyzed from the neck downward - to participate in applications such as VRChat or the Metaverse[^1]. It might also be useful if the available space to enjoy VR in is limited, due to the - you know - entire "flailing-your-arms-around-to-do-stuff-in-vr"[^2]-thing.
+One apparent use for such a technology would be to aid and enable people with bodily impairments - say people paralyzed from the neck downward - to participate in applications such as VRChat or the Metaverse[^3]. It might also be useful if the available space to enjoy VR in is limited, due to the - you know - entire "flailing-your-arms-around-to-do-stuff-in-vr"[^4]-thing.
 
-[^1]: Full disclosure: I don't believe the Metaverse in its' current form will ever take of or be as relevant as the internet. I also think it's funny that (then) Facebook chose the name "Metaverse" as coined by Neal Stephenson in his 1992 Novel "Snow Crash". This entire situation reminds me of the following tweet: https://twitter.com/AlexBlechman/status/1457842724128833538
+[^3]: Full disclosure: I don't believe the Metaverse in its' current form will ever take of or be as relevant as the internet. I also think it's funny that (then) Facebook chose the name "Metaverse" as coined by Neal Stephenson in his 1992 Novel "Snow Crash". This entire situation reminds me of the following tweet: https://twitter.com/AlexBlechman/status/1457842724128833538
 
-[^2]: This is the official term for when you move your arms around erratically in VR, and I will not be swayed on this.
+[^4]: This is the official term for when you move your arms around erratically in VR, and I will not be swayed on this.
 
 ---
 

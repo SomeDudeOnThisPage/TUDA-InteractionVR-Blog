@@ -3,25 +3,22 @@ languageCode = 'en-us'
 title = "Interaction in Virtual and Augmented Reality"
 theme = "blackburn"
 publishDir = "docs"
+homepage = "https://github.com/yoshiharuyamashita/blackburn"
+tags = ["blog", "personal", "purecss", "responsive"]
 
-copyright = "&copy; 2022. All rights reserved."
+copyright = "&copy; copyright LOLOL"
 canonifyurls = true
 paginate = 10
-
-[indexes]
-  tag = "tags"
-  topic = "topics"
 
 [params]
   # Shown in the home page
   subtitle = "Blog for TU-Darmstadt course in WS22/23"
-  # brand = "Blackburn"
+  # brand = "Robin Buhlmann"
   # googleAnalytics = "Your Google Analytics tracking ID"
   # disqus = "Your Disqus shortname"
   # CSS name for highlight.js
-  highlightjs = "androidstudio"
-  highlightjs_extra_languages = ["yaml"]
-  dateFormat = "02 Jan 2006, 15:04"
+  highlightjs = "agate"
+  dateFormat = "02 Jan 2006"
   # Include any custom CSS and/or JS files
   # (relative to /static folder)
   custom_css = ["css/my.css"]
@@ -34,11 +31,33 @@ paginate = 10
     pre = "<i class='fa fa-home fa-fw'></i>"
     weight = 1
     identifier = "home"
-    url = "/post/"
+    url = "/home"
+	
+  [[menu.main]]
+    name = "Posts"
+    pre = "<i class='fa fa-list fa-fw'></i>"
+    weight = 2
+    identifier = "post"
+    url = "/tags/interaction-in-vr/ar/"
+
+  [[menu.main]]
+    name = "Videos"
+    pre = "<i class='fa fa-video fa-fw'></i>"
+    weight = 3
+    identifier = "videos"
+    url = "/videos/"
+
+  [[menu.main]]
+    name = "Downloads"
+    pre = "<i class='fa fa-download fa-fw'></i>"
+    weight = 5
+    identifier = "downloads"
+    url = "/downloads/"
+
   [[menu.main]]
     name = "About"
     pre = "<i class='fa fa-user fa-fw'></i>"
-    weight = 3
+    weight = 6
     identifier = "about"
     url = "/about/"
 
@@ -52,5 +71,10 @@ paginate = 10
   # SNS career oriented
   xing = "Robin_Buhlmann2/cv"
 
+  website = "www.buhlmann.me"
+
   # Techie
   github = "SomeDudeOnThisPage"
+  
+[markup.goldmark.renderer]
+  unsafe = true

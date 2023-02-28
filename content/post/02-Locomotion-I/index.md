@@ -4,6 +4,7 @@ description: ""
 date: 2023-01-02
 draft: false
 type: blog
+tags: [Interaction in VR/AR]
 ---
 
 To develop the locomotion technique, I set up a simple testing scene to enable controlled testing without needing to deploy the entire Parkour-Scene everytime. The scene is currently incredibly simple, yet provides everything needed to test a simple character-controller: Collisions and a slope.
@@ -20,7 +21,7 @@ To develop the locomotion technique, I set up a simple testing scene to enable c
 Speaking of character controller, we need to decide on a way to actually move a character around the scene. Right now, all we have is a static OVRCameraRig sitting around in the scene. There's many ways to create a control system in Unity - but one of the easiest ways is to just use the already existing 'Character Controller' that comes with Unity.
 
 I started by creating some kind of mesh that represents the character, and add the OVRCameraRig as a child to said mesh. Technically, only a MeshCollider is required, but adding a Mesh makes it easier to visually debug the locomotion technique. Note that the Mesh-Component should ideally be disabled for production builds. Make sure the forward-vector (the blue z-Axis when clicking the mesh) aligns with the cameras' forward-axis (The height offset does not matter in this case, however). This will be important for Chapter 3.
->{{% fa sticky %}} **Note:** Whenever I speak of 'the' camera, I refer to the Center-Eye-Anchor of the OVRCameraRig.
+>**Note:** Whenever I speak of 'the' camera, I refer to the Center-Eye-Anchor of the OVRCameraRig.
 
 Afterwards, I simply added a 'CharacterController'-Component to the Player object.
 
@@ -103,7 +104,7 @@ To enable movement along the direction of the camera, we need to, suprisingly, a
 |:--:|
 | **Angles:** This image gives a reference to which angle relates to which head movement. These naming conventions will be used for all further discussions. |
 
->{{% fa sticky %}} **Note:** Whenever I talk about 'normalized' angles now, I mean angles transformed into the range of [-180°,180°) with any given deadzone. A 'native' angle describes an angle before normalization.
+>**Note:** Whenever I talk about 'normalized' angles now, I mean angles transformed into the range of [-180°,180°) with any given deadzone. A 'native' angle describes an angle before normalization.
 
 We also want a 'deadzone', i.e. an angle around 0°, in which a native angle of less than the deadzone value results in a normalized angle of 0°.
 

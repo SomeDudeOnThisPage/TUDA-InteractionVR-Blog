@@ -4,6 +4,7 @@ description: ""
 date: 2023-01-04
 draft: false
 type: blog
+tags: [Interaction in VR/AR]
 ---
 
 This chapter is mostly about making small adjustments based on personal impression of the locomotion system after initial testing, as well as incrementally fine-tuning the values to improve the movement itself.
@@ -37,7 +38,7 @@ The main factors I wanted to adjust for are, in order of subjective importance t
 * **Speed**: Users should be able to traverse a relatively simple environment, such as the parkour level, fast and effortlessly.
 * **Comfort**: Users should not have to move their neck into unpleasant and uncomfortable angles for long periods of time. This also includes tuning the size of the initial deadzone.
 
->{{% fa sticky %}} **Note:** All of these descriptions and values apply to my personal, subjective experience while testing the system.
+>**Note:** All of these descriptions and values apply to my personal, subjective experience while testing the system.
 
 ### 1. Amount of Levels
 The total amount of levels is mostly limited by the range of motion we have when it comes to the pitch of the neck. With too many levels, we lose the benefit of having distinct levels with specific, precise coefficients in the first place, so the total amount of levels should ideally be kept low.
@@ -84,7 +85,7 @@ When it comes to the 'Return to Center'-Mechanic, really the main three factors 
 
 So, to summarize, smaller deadzone angles, but therefore slower rotation, not only result in less motion sickness, but also less tiring head-movements required to perform a basic task such as turning, which is a big plus. In general, the lower the turn-rate, the less motion sickness, and the lower the deadzone angle, the less strain on a users' neck. When moving faster, we can increase the rotation-speed dynamically based on speed without inducing significantly (warning - *significantly* used without *any* scientific or statistical process behind it) more motion sickness.
 
->{{% fa sticky %}} **Note:** All of these descriptions apply to my personal, subjective experience while testing the system.
+>**Note:** All of these descriptions apply to my personal, subjective experience while testing the system.
 
 ---
 

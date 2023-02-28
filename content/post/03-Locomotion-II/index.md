@@ -4,6 +4,7 @@ description: ""
 date: 2023-01-03
 draft: false
 type: blog
+tags: [Interaction in VR/AR]
 ---
 
 As you may have noticed already, the movement implementation of the previous chapter has one integral flaw: There is no way to actually rotate around the up-axis in order to turn around farther than a normal person's neck allows. As this project is intended to help people with severely reduced freedom of movement, 360° full body turning may not be a possibility, and the turning angle needs to be defined by the maximum angle the neck can turn. I don't know about the person reading this, but I for one am not an owl. Thus, I assume that a normal, healthy human has about a 90° sideways rotational angle[^1], which currently limits the locomotion to 180°, centered around the negative z-Axis. Note that this value likely varies between users, especially those with bodily impairments.

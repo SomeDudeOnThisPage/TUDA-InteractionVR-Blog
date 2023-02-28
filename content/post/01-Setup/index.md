@@ -4,6 +4,7 @@ description: ""
 date: 2023-01-01
 draft: false
 type: blog
+tags: [Interaction in VR/AR]
 ---
 
 ## Headset Configuration
@@ -11,7 +12,7 @@ Before beginning to develop software for the Quest2, we need to setup the headse
 
 ### Quest2
 First, enable development mode on the Headset. Unfortunately, in order to do this, a Smartphone with the Oculus-App is required. After installing the App and logging into your Meta-Account, pair your Phone to the Quest2. Make sure the Phone and Quest are in the same WiFi network, both have bluetooth enabled, your phone having location services enabled, and both devices being situated close to one another and the router. 
->{{% fa sticky %}} **Do I really need the f\*\*\*ing app?** Yes, Meta requires all these services enabled to just pair the Quest to a Phone, and doesn't let you enable developer mode otherwise. Some time ago, there was also a way to enable developer-mode by registering an organization on your Meta-Account. However, this method seems to no longer work. Thanks, Mark.
+>**Do I really need the f\*\*\*ing app?** Yes, Meta requires all these services enabled to just pair the Quest to a Phone, and doesn't let you enable developer mode otherwise. Some time ago, there was also a way to enable developer-mode by registering an organization on your Meta-Account. However, this method seems to no longer work. Thanks, Mark.
 
 After pairing, simply enable Developer mode on the Quest by ticking the checkbox inside the settings in the app.
 
@@ -24,7 +25,7 @@ To deploy to the Quest, first install the Android Build Tools via Unity Hub. Aft
 |:--:|
 | **Unity Build Settings:** Additionally, I enabled 'Development Build', to allow for quicker deploy times by patching the executable already present on the device after the first deploy. |
 
->{{% fa sticky %}} **Unity Editor:** Any sensibly new version of the Unity editor should work fine. For this project, Unity Editor v.*2021.3.16f1* was chosen, simply because the example project provided by the course organizers used v.*2021.3.x*.
+>**Unity Editor:** Any sensibly new version of the Unity editor should work fine. For this project, Unity Editor v.*2021.3.16f1* was chosen, simply because the example project provided by the course organizers used v.*2021.3.x*.
 
 After the setup, simply hit 'Build and Run' when the headset is connected to the development machine, and choose a name for the .apk file to be deployed to the Quest. The Quest should automatically run the application after deployment. The App can be found on the Quest in the App-Explorer when selecting the 'Unknown Sources'-Filter.
 
