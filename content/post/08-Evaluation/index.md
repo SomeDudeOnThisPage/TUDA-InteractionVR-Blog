@@ -27,9 +27,9 @@ After finishing the parkour, the times and amount of coins collected were record
 * "On a scale from 1 to 10 how present did you feel in the virtual world" (1 lowest 10 highest)
 * "On a scale from 1 to 10, how much fun did you have during the task[^4]" (1 lowest 10 highest)
 
-Additionally to these three questions, I also asked participants to rate their neck fatigue. ("On a scale from 1 to 10, how would you describe your current neck fatigue after the task?" (1 lowest 10 highest))
+Additionally to these three questions, I also asked participants to rate their neck fatigue ("On a scale from 1 to 10, how would you describe your current neck fatigue after the task?" (1 lowest 10 highest)), as well as eye fatigue (question as above). Eye-fatigue here means the stress asserted onto the eyes from having to look away from the center of screen for an extended period of time.
 
-Participants were also given the chance to voice any other feedback they have about the locomotion technique after the study, as well as open feedback during the study.
+Participants were also given the chance to voice any other feedback they have about the locomotion technique after the study, as well as open feedback during the study. None of the participants had any prior VR-Experiences of note.
 
 [^2]: Only for initial tests, for the final tests, interaction tasks were disabled entirely.
 
@@ -41,26 +41,20 @@ Participants were also given the chance to voice any other feedback they have ab
 Click to expand the details pane to see the videos.
 
 {{< details "Participant A" >}}
-{{< youtube g9m1rO3QPWk >}}
-{{< /details >}}
-
-{{< details "Participant B" >}}
-{{< youtube g9m1rO3QPWk >}}
-{{< /details >}}
-
-{{< details "Participant D" >}}
-{{< youtube g9m1rO3QPWk >}}
+{{< youtube wBFJCRDCdds >}}
 {{< /details >}}
 
 #### Results
-Participants could finish the course on average in 0.00min, and a mean accuracy of 0.00% with 0.00 Coins collected. The following table shows the times and accuracy for each participant. Note that this also includes my own values in the fourth row (Participant D).
+Participants could finish the course on average in 0.00s, and a mean accuracy of 0.00% with 0.00 of a total of 65 Coins collected. The following table shows the times and accuracy for each participant. Note that this also includes my own values in the fourth row (Participant D)[^5].
 {{< pure_table
-  "Participant|Time (min)|Coins|Accuracy (%)"
-  "A|0.00|0|0.00%"
-  "B|0.00|0|0.00%"
+  "Participant|Time (s)|Coins|Accuracy (%)"
+  "A|67.2|62|89.86%"
+  "B|138.7|35|50.72%"
   "C|0.00|0|0.00%"
-  "D|0.00|0|0.00%"
+  "D|54.21s|63|91.30%"
 >}}
+
+[^5]: As a fun exercise, attempt to guess which participant is my dad based on the values.
 
 The following plot shows the answers to the questions mentioned above, these do obviously *not* include my own answers.
 
@@ -70,8 +64,10 @@ The following plot shows the answers to the questions mentioned above, these do 
 >}}
 </center>
 
-#### Further Feedback
-
+Many of these values are obviously flawed:
+* All values are basically void without a baseline to compare to (e.g. thumbstick movement or teleportation).
+* The fatigue-related values are not really saying much because of the extremely short usage time of each participant. Same goes for the motion sickness values.
+* Overall, participants found the locomotion technique to be enjoyable, however, these values may obviously be biased as I only let friends and family test the technique.
 
 ---
 
@@ -84,9 +80,8 @@ Also, I never really had the chance to actually experience different VR-Applicat
 ### Where could I improve this project?
 As already stated in a post before, I have to give back the headset sometime in march. But, if I could continue working on/improving these interaction systems, I would likely do the following (in no particular order):
 
-
-
----
-
-## What's next?
-This is the end.
+* Re-do / fix / test the entire interaction techniques, using some of the approaches discussed in the individual chapters.
+* Add some form of calibration to the threshold values to account for differences in physique, disabilities and other factors.
+* Add different StateManagers, e.g. speech recognition or other external hardware, that are not the default controllers.
+* Actually do a study with the intended target audience?
+* Polish the application into an actually acceptable, non-cobbled-together-student-project state.

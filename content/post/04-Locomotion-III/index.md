@@ -36,7 +36,7 @@ Now, I would like to say that I used some kind of amazing scientific method to d
 The main factors I wanted to adjust for are, in order of subjective importance to me, as follows:
 * **Accuracy**: Users should be able to (mostly) effortlessly navigate around obstacles and orient themselves in a desired angle around an object when moving slowly. This will obviously be important for the interaction task. Users should also be able to make precise adjustments to their positioning when moving faster, for instance to collect the coins on their way whilst traversing the parkour level.
 * **Speed**: Users should be able to traverse a relatively simple environment, such as the parkour level, fast and effortlessly.
-* **Comfort**: Users should not have to move their neck into unpleasant and uncomfortable angles for long periods of time. This also includes tuning the size of the initial deadzone.
+* **Comfort**: Users should not have to move their neck into unpleasant and uncomfortable angles for long periods of time. This also includes tuning the size of the initial deadzone. Same goes for the eyes - the further away a user needs to look from the center of screen to go quickly, or left/right to turn, the more stress is going to be asserted onto the eyes.
 
 >**Note:** All of these descriptions and values apply to my personal, subjective experience while testing the system.
 

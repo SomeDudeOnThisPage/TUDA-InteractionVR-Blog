@@ -18,4 +18,8 @@ Click to open details.
 ## Study Footage
 Click to open details.
 
+{{< details "Participant Footage" >}}
+{{< youtube wBFJCRDCdds >}} 
+{{< /details >}}
+
 ---
