@@ -1,0 +1,111 @@
+p {
+  text-align: justify;
+}
+
+h2 {
+	margin-top: 2em;
+}
+
+h3 {
+	margin-top: 2em;
+}
+
+h4 {
+	margin-top: 2em;
+}
+
+.content {
+	max-width: 65%;
+	margin-top: 3em;
+	margin-bottom: 3em;
+}
+
+#menu {
+	margin-left: 0px;
+	left: 0px;
+	width: 175px;
+}
+
+#footer {
+	background-color : #191818;
+	height: 175px;
+}
+
+img {
+	border: 1px solid #777;
+	box-shadow: 5px 5px 5px #CCC;
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+blockquote {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	background-color: #333;
+	padding: 3px 13px 3px 13px;
+	border-radius: 5px;
+	color: #CCC;
+	box-shadow: 5px 5px 5px #CCC;
+	transition: 1s;
+}
+
+blockquote:hover {
+		margin-top: 2em;
+	margin-bottom: 2em;
+	background-color: #333;
+	padding: 3px 13px 3px 13px;
+	border-radius: 5px;
+	color: #CCC;
+	box-shadow: 0px 0px 0px #CCC;
+	transition: 1s;
+}
+
+pre:has(> code) {
+	padding: 1px 5px 1px 5px;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px #CCC;
+	transition: 1s;
+}
+
+pre:has(> code):hover {
+	padding: 1px 5px 1px 5px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 0px #CCC;
+	transition: 1s;
+}
+
+hr {
+	margin-bottom: 3em;
+	margin-top: 3em;
+}
+
+details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: 0.5em 0.5em 0;
+	cursor: pointer;
+	transition: 1s;
+}
+
+summary {
+    font-weight: bold;
+    margin: -0.5em -0.5em 0;
+    padding: 0.5em;
+	transition: 1s;
+}
+
+details[open] {
+	transition: 1s;
+    padding: 0.5em;
+}
+
+details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: 0.5em;
+	transition: 1s;
+}

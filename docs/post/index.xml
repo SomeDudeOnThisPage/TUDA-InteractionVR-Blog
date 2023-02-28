@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Interaction in Virtual and Augmented Reality</title>
+    <link>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/</link>
+    <description>Recent content in Posts on Interaction in Virtual and Augmented Reality</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; copyright LOLOL</copyright>
+    <lastBuildDate>Sun, 26 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Evaluation</title>
+      <link>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/08-evaluation/</link>
+      <pubDate>Sun, 26 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/08-evaluation/</guid>
+      <description>Evaluation As said before, the &amp;ldquo;quantitative&amp;rdquo;1 evaluation of the application is limited to the locomotion technique. The interaction techniques were simply too unrefined to actually present testers in the context of the parkour. I did, however, collect some qualitative feedback for the interaction techniques, most of which I already noted in their respective chapters. Nevertheless, this chapter will serve as a summary for all qualitative feedback I received.
+Locomotion The locomotion was evaluated using two distinct variables:</description>
+    </item>
+    
+    <item>
+      <title>Interaction - Rotation</title>
+      <link>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/07-interaction-rotation/</link>
+      <pubDate>Tue, 21 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/07-interaction-rotation/</guid>
+      <description>Foreword This implementation of rotation is, unlike translation, which at least somewhat works, quite bad. The main culprit which makes interaction so bad, in fact. The reason for this is mainly that I had to stick pretty much with my initial implementation due to time constraints. Unfortunately, I&amp;rsquo;ve lost a lot of time due to falling ill basically the entirity of january. This chapter will describe the implementation that exists, but also discuss some approaches that could be used in the future1 to improve rotation, or interaction in general.</description>
+    </item>
+    
+    <item>
+      <title>Interaction - Translation</title>
+      <link>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/06-interaction-translation-ii/</link>
+      <pubDate>Sun, 19 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/06-interaction-translation-ii/</guid>
+      <description>Translation So. How do we move objects with only our neck? The answer for this is relatively simple. We simply raycast to check if we are directly looking at an interactable, and if so, we enter the translation state via the means discussed in the last chapter. We then simply move (not rotate!) the object around the user to match the user&amp;rsquo;s view direction. More exact, we translate the object to the current view position with a constant distance between the camera and the object.</description>
+    </item>
+    
+    <item>
+      <title>Interaction - State Management</title>
+      <link>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/05-interaction-translation/</link>
+      <pubDate>Sat, 18 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/05-interaction-translation/</guid>
+      <description>Foreword The interaction techniques are bad. So bad, in fact, that I decided to split the project in two: The parkour, with only the movement, and the &amp;ldquo;Testing-Level&amp;rdquo;, which I repurposed to the &amp;ldquo;Interaction-Testing-Level&amp;rdquo;, where the interaction technique can be experimented upon. The reasons for this are many, but it mainly boils down to the interaction being so bad and slow that it severely hampers the flow of the parkour, and the interaction just plain not working how I want it to, mainly due to me not having enough time until the deadline of the project to reflect on my initial implementation and iterate upon it (like I have done with the locomotion technique).</description>
+    </item>
+    
+    <item>
+      <title>Locomotion III - Tuning Values</title>
+      <link>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/04-locomotion-iii/</link>
+      <pubDate>Wed, 04 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/04-locomotion-iii/</guid>
+      <description>This chapter is mostly about making small adjustments based on personal impression of the locomotion system after initial testing, as well as incrementally fine-tuning the values to improve the movement itself.
+General Changes I did end up enabling &amp;lsquo;strafing&amp;rsquo; by tilting your head on the forward (z) axis. This turned out to be somewhat confusing, but manageable, when standing still, but made precise course adjustments when moving at a faster pace much easier.</description>
+    </item>
+    
+    <item>
+      <title>Locomotion II - Turning</title>
+      <link>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/03-locomotion-ii/</link>
+      <pubDate>Tue, 03 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/03-locomotion-ii/</guid>
+      <description>As you may have noticed already, the movement implementation of the previous chapter has one integral flaw: There is no way to actually rotate around the up-axis in order to turn around farther than a normal person&amp;rsquo;s neck allows. As this project is intended to help people with severely reduced freedom of movement, 360° full body turning may not be a possibility, and the turning angle needs to be defined by the maximum angle the neck can turn.</description>
+    </item>
+    
+    <item>
+      <title>Locomotion I - Headset Angles &amp; Basic Movement</title>
+      <link>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/02-locomotion-i/</link>
+      <pubDate>Mon, 02 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/02-locomotion-i/</guid>
+      <description>To develop the locomotion technique, I set up a simple testing scene to enable controlled testing without needing to deploy the entire Parkour-Scene everytime. The scene is currently incredibly simple, yet provides everything needed to test a simple character-controller: Collisions and a slope.
+Unity Testing Scene: Everything a man needs to survive. Also, I didn&amp;rsquo;t know how to correctly scale materials independant of the mesh it&amp;rsquo;s applied to, so this scene uses around 20 materials with the same texture and different scaling.</description>
+    </item>
+    
+    <item>
+      <title>Setting up Unity for Quest2 development.</title>
+      <link>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/01-setup/</link>
+      <pubDate>Sun, 01 Jan 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/01-setup/</guid>
+      <description>Headset Configuration Before beginning to develop software for the Quest2, we need to setup the headset and corresponding software.
+Quest2 First, enable development mode on the Headset. Unfortunately, in order to do this, a Smartphone with the Oculus-App is required. After installing the App and logging into your Meta-Account, pair your Phone to the Quest2. Make sure the Phone and Quest are in the same WiFi network, both have bluetooth enabled, your phone having location services enabled, and both devices being situated close to one another and the router.</description>
+    </item>
+    
+    <item>
+      <title>Mostly Hands-Free Interaction in VR - An Introduction</title>
+      <link>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/00-introduction/</link>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/post/00-introduction/</guid>
+      <description>This entire blog is about &amp;lsquo;Interaction in Virtual and augmented Reality&amp;rsquo;, a course at TU-Darmstadt in the winter semester 2022/2023, in which I participated. More details can be (hopefully, in case TUCAN, the universities&amp;rsquo; system, didn&amp;rsquo;t die) found here. The course was held by Jan Gugenheimer1, the overall class structure was inspired by the MIT-Course &amp;ldquo;How to make (almost) Anything&amp;rdquo;2, a course in which people&amp;hellip; make&amp;hellip; stuff&amp;hellip; and then write about it.</description>
+    </item>
+    
+  </channel>
+</rss>

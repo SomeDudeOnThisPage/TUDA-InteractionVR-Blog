@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="The Beginning of the Downward Spiral">
+  <meta name="generator" content="Hugo 0.109.0">
+
+  <title>Interaction - State Management &middot; Interaction in Virtual and Augmented Reality</title>
+
+    
+
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/pure-min.css">
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-old-ie-min.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pure/1.0.0/grids-responsive-min.css">
+  <!--<![endif]-->
+
+  <!--[if lte IE 8]>
+  <link rel="stylesheet" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/css/side-menu-old-ie.css">
+  <![endif]-->
+  <!--[if gt IE 8]><!-->
+  <link rel="stylesheet" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/css/side-menu.css">
+  <!--<![endif]-->
+
+  <link rel="stylesheet" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/css/blackburn.css">
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet" type="text/css">
+
+  
+  <script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+ 
+  
+
+  
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/styles/agate.min.css">
+  <script async src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.6.0/highlight.min.js"></script>
+  
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+
+  <link rel="shortcut icon" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/img/favicon.ico" type="image/x-icon" />
+
+  
+    
+        <link rel="stylesheet" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/css/my.css">
+    
+  
+  
+    
+        <script src="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/js/my.js"></script>
+    
+  
+
+</head>
+
+
+<body>
+<div id="layout">
+
+  
+<a href="#menu" id="menuLink" class="menu-link">
+  
+  <span></span>
+</a>
+<div id="menu">
+
+  
+
+  <div class="pure-menu">
+    <ul class="pure-menu-list">
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/home"><i class='fa fa-home fa-fw'></i>Home</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/tags/interaction-in-vr/ar/"><i class='fa fa-list fa-fw'></i>Posts</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/videos/"><i class='fa fa-video fa-fw'></i>Videos</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/downloads/"><i class='fa fa-download fa-fw'></i>Downloads</a>
+      
+        </li>
+      
+      
+        <li class="pure-menu-item">
+          <a class="pure-menu-link" href="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/about/"><i class='fa fa-user fa-fw'></i>About</a>
+      
+        </li>
+      
+    </ul>
+  </div>
+
+  <div class="pure-menu social">
+  <ul class="pure-menu-list">
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://youtube.com/user/FreakGamingLP" rel="me" target="_blank"><i class="fab fa-youtube-square fa-fw"></i>YouTube</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://xing.com/profile/Robin_Buhlmann2/cv" rel="me" target="_blank"><i class="fab fa-xing-square fa-fw"></i>Xing</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <li class="pure-menu-item">
+      <a class="pure-menu-link" href="https://github.com/SomeDudeOnThisPage" rel="me" target="_blank"><i class="fab fa-github-square fa-fw"></i>GitHub</a>
+    </li>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+  </ul>
+</div>
+
+
+  <div>
+  <div class="small-print">
+    <small>&copy; copyright LOLOL</small>
+  </div>
+  <div class="small-print">
+    <small>Built with&nbsp;<a href="https://gohugo.io/" target="_blank">Hugo</a></small>
+    <small>Theme&nbsp;<a href="https://github.com/yoshiharuyamashita/blackburn" target="_blank">Blackburn</a></small>
+  </div>
+</div>
+
+</div>
+
+
+  <div id="main">
+
+
+<div class="header">
+  <h1>Interaction - State Management</h1>
+  <h2>The Beginning of the Downward Spiral</h2>
+</div>
+<div class="content">
+  <h2 id="foreword">Foreword</h2>
+<p>The interaction techniques are bad. So bad, in fact, that I decided to split the project in two: The parkour, with only the movement, and the &ldquo;Testing-Level&rdquo;, which I repurposed to the &ldquo;Interaction-Testing-Level&rdquo;, where the interaction technique can be experimented upon. The reasons for this are many, but it mainly boils down to the interaction being so bad and slow that it severely hampers the flow of the parkour, and the interaction just plain not working how I want it to, mainly due to me not having enough time until the deadline of the project to reflect on my initial implementation and iterate upon it (like I have done with the locomotion technique).</p>
+<p>Thus, the following interaction techniques, as well as the blog posts themselves will likely not be of the same quality as everything that came before. You have been warned.</p>
+<hr>
+<h2 id="translation">Translation</h2>
+<p>That being said, how do we actually move things with only our neck. To even begin answer that question, we need to solve a different question: <em>How do we even interact with an object in the first place?</em></p>
+<h3 id="interaction">Interaction</h3>
+<p>As of now, the program only manages two states: stationary and moving. A user simply switches between these states using a single button on a controller. Note that this button needn&rsquo;t neccessarily be on a controller, it could be a foot pedal, something clenched between your teeth, or even just a microphone that records audio, and the application realizing when you yell &ldquo;<strong>BAP</strong>&rdquo;.</p>
+<p>Still, how do we introduce more states without significantly increasing the amount of thinking, or physical actions, a user needs to take to both switch between stationary, movement, translation, and - as will be discussed later - rotation modes? One simple approach is to limit entering the interaction modes - translation and rotation - when actually looking at an interactable object which is relatively close to the player. This is simple enough. Just tag an object as interactable, and when the user presses the button whilst in stationary mode, enter translation mode instead of the movement mode. If we now define the &ldquo;player-can-interact&rdquo;-state as it&rsquo;s own state, this leaves us with a total of five states that need to be managed:</p>
+<ul>
+<li>DEFAULT (Stationary)</li>
+<li>DEFAULT_CAN_INTERACT</li>
+<li>MOVEMENT</li>
+<li>INTERACT_TRANSLATE</li>
+<li>INTERACT_ROTATE</li>
+</ul>
+<p>But how do we switch between the two interaction modes? One option, and my first approach, would be to just move through the interaction modes incrementally when the button is pressed.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+
+<div class="pure-g">
+
+  
+  
+  
+  
+  <div class="pure-u-1-1">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="states-1.png"
+        alt="lmao">
+    </div>
+  </div>
+  
+
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Initial State Diagram:</strong> When issuing another input whilst in the translation state, the rotation state is entered. It is not possible to exit translation without entering the rotation state.</td>
+</tr>
+</tbody>
+</table>
+<p>This, however, has one major drawback: forcing the rotation state after the translation state would frequently mess up rotation, if a user wants to adjust the translation of an object again after already positioning and rotating it once before. Due to this, I revised the interaction technique to account for - in this case - &ldquo;double-clicks&rdquo;.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">
+
+<div class="pure-g">
+
+  
+  
+  
+  
+  <div class="pure-u-1-1">
+    <div style="padding: 0 .2em">
+      <img
+        class="pure-img-responsive"
+        src="states-2.png"
+        alt="lmao">
+    </div>
+  </div>
+  
+
+</div>
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center"><strong>Revised State Diagram:</strong> We trade the simplicitly of only working with single-clicks for the ability to enter the interaction modes separately from one another.</td>
+</tr>
+</tbody>
+</table>
+<p>This technically breaks one of my prior requirements for this project - being only reliant on one, singular external input to manage any state. However, this is dependent on the actual input technique used. For instance, when using speech recognition as input, we could simply define different words or noises to enter states independently (&ldquo;BLEH&rdquo; to translate, &ldquo;BLUGH&rdquo; to rotate or similar). Speaking of&hellip;</p>
+<h3 id="scriptable-objects-my-beloved">Scriptable Objects, my beloved!</h3>
+<p>Guess what I used to implement the player state manager? That&rsquo;s right, it&rsquo;s the return of the scriptable objects. In theory, this would allow me to create multiple state managers, and swap them at runtime. For instance, I could switch between button input and speech recognition dependent on the situation and the needs/limitations of the user. I also had to implement my own crappy &ldquo;Clicker-Counter&rdquo; to count clicks in a short timeframe, to actually detect double clicks, as unfortunately, Unity has no in-build support for this functionality outside of UI-Elements.</p>
+<hr>
+<h2 id="whats-next">What&rsquo;s next?</h2>
+<p>In the next chapter, the implementation of the translation technique will be presented and discussed, before we move on to the rotation technique.</p>
+
+</div>
+
+</div>
+</div>
+<script src="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/js/ui.js"></script>
+<script src="https://somedudeonthispage.github.io/TUDA-InteractionVR-Blog/js/menus.js"></script>
+
+<div id="footer">
+</div>
+
+</body>
+</html>
+
